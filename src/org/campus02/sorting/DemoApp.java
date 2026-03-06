@@ -21,7 +21,7 @@ public class DemoApp {
         cars[3] = new Car("Audi", 2024, 36_123);
         // STRG+D
 
-        ArrayHelper.arrangeOrderKilometer(cars);
+        ArrayHelper.arrangeOrder(cars);
 
         System.out.println(Arrays.toString(cars));
 

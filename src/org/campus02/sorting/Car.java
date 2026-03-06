@@ -16,6 +16,10 @@ public class Car {
         this.drivenKilometer = drivenKilometer;
     }
 
+    public int sortValue() {
+        return productionYear;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
