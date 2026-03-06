@@ -16,8 +16,15 @@ public class Car {
         this.drivenKilometer = drivenKilometer;
     }
 
-    public int sortValue() {
-        return productionYear;
+    public int sortValue(Car other) {
+        if (drivenKilometer > other.drivenKilometer) {
+            return -1;
+        }
+        else if (drivenKilometer < other.drivenKilometer) {
+            return 1;
+        }
+        else
+            return 0;
     }
 
     @Override
