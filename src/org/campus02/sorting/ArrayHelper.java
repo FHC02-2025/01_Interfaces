@@ -42,6 +42,26 @@ public class ArrayHelper {
         // 8, 7, 1, 9
     }
 
+    public static void arrangeOrderSortable2(Sortable2[] elements) {
+
+        boolean exchanged = true;
+
+        while (exchanged /* == true*/) {
+            exchanged = false;
+            // Schritt 1
+            for (int i = 0; i < elements.length - 1; i++) {
+                // 9, 8, 7, 1
+                if (elements[i].sortValue(elements[i + 1]) > 0) { // Schritt 2
+                    Sortable2 temp = elements[i];
+                    elements[i] = elements[i + 1]; // 8, 8, 7, 1
+                    elements[i + 1] = temp; // 8, 9, 7, 1
+                    exchanged = true;
+                }
+            }
+        }
+        // 8, 7, 1, 9
+    }
+
     public static void arrangeOrder2(Sortable[] elements) {
 
         boolean exchanged;
@@ -59,7 +79,7 @@ public class ArrayHelper {
                 }
             }
         } while (exchanged == true);
-        // 8, 7, 1, 9 
+        // 8, 7, 1, 9
     }
 
 //    public static void arrangeOrderKilometer(Car[] cars) {

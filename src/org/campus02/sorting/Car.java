@@ -1,8 +1,9 @@
 package org.campus02.sorting;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Car implements Sortable {
+public class Car implements Sortable, Sortable2<Car> {
 
     private String carType;
     private int productionYear;
@@ -21,6 +22,15 @@ public class Car implements Sortable {
         return drivenKilometer;
     }
 
+    @Override
+    public int sortValue(Car other) {
+        if (productionYear > other.productionYear) {
+            return 1;
+        } else if (productionYear < other.productionYear) {
+            return -1;
+        } else
+            return 0;
+    }
 
    /* public int sortValue(Car other) {
         if (drivenKilometer > other.drivenKilometer) {
@@ -75,4 +85,6 @@ public class Car implements Sortable {
     public void setDrivenKilometer(int drivenKilometer) {
         this.drivenKilometer = drivenKilometer;
     }
+
+
 }
