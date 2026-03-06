@@ -1,6 +1,5 @@
 package org.campus02.sorting;
 
-import java.util.Comparator;
 import java.util.Objects;
 
 public class Car implements Sortable, Sortable2<Car> {
@@ -39,7 +38,8 @@ public class Car implements Sortable, Sortable2<Car> {
             return 1;
         } else
             return 0;
-    }*/
+    }
+    */
 
     @Override
     public boolean equals(Object o) {

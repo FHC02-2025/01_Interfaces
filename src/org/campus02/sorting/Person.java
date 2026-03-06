@@ -1,6 +1,8 @@
 package org.campus02.sorting;
 
-public class Person implements Sortable {
+import java.nio.charset.StandardCharsets;
+
+public class Person implements Sortable, Sortable2<Person> {
 
     private int age;
     private String name;
@@ -37,5 +39,10 @@ public class Person implements Sortable {
     @Override
     public int sortValue() {
         return age;
+    }
+
+    @Override
+    public int sortValue(Person other) {
+        return name.compareTo(other.getName()); // 1 ... größer, 0 ... gleich, -1 ... kleiner
     }
 }
