@@ -2,7 +2,7 @@ package org.campus02.sorting;
 
 import java.util.Objects;
 
-public class Car {
+public class Car implements Sortable {
 
     private String carType;
     private int productionYear;
@@ -16,16 +16,20 @@ public class Car {
         this.drivenKilometer = drivenKilometer;
     }
 
-    public int sortValue(Car other) {
+    @Override
+    public int sortValue() {
+        return drivenKilometer;
+    }
+
+
+   /* public int sortValue(Car other) {
         if (drivenKilometer > other.drivenKilometer) {
             return -1;
-        }
-        else if (drivenKilometer < other.drivenKilometer) {
+        } else if (drivenKilometer < other.drivenKilometer) {
             return 1;
-        }
-        else
+        } else
             return 0;
-    }
+    }*/
 
     @Override
     public boolean equals(Object o) {

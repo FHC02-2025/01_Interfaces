@@ -26,5 +26,14 @@ public class DemoApp {
         System.out.println(Arrays.toString(cars));
 
 
+        Person[] persons = new Person[2];
+        persons[0] = new Person(89, "Susi");
+        persons[1] = new Person(51, "Max");
+
+        System.out.println(Arrays.toString(persons));
+        ArrayHelper.arrangeOrder(persons);
+        System.out.println(Arrays.toString(persons));
+
+
     }
 }
