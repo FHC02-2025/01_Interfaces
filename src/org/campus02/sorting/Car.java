@@ -1,5 +1,7 @@
 package org.campus02.sorting;
 
+import java.util.Objects;
+
 public class Car {
 
     private String carType;
@@ -12,6 +14,18 @@ public class Car {
         this.carType = carType;
         this.productionYear = productionYear;
         this.drivenKilometer = drivenKilometer;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return productionYear == car.productionYear && drivenKilometer == car.drivenKilometer && Objects.equals(carType, car.carType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(carType, productionYear, drivenKilometer);
     }
 
     @Override
