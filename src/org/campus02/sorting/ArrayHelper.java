@@ -59,7 +59,7 @@ public class ArrayHelper {
                 }
             }
         } while (exchanged == true);
-        // 8, 7, 1, 9
+        // 8, 7, 1, 9 
     }
 
 //    public static void arrangeOrderKilometer(Car[] cars) {
