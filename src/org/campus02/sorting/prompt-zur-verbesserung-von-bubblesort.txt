@@ -1,4 +1,7 @@
-Agiere als Java-Entwickler und als Experte für Sortieralgorithmen. Dies ist eine Implementierung für BubbleSort. Analysiere diese und liefere konkrete Verbesserungsvorschläge, um die Laufzeit zu verbessern. Achte auf gut lesbaren Code:
+Agiere als Java-Entwickler und als Experte für Sortieralgorithmen.
+Dies ist eine Implementierung für BubbleSort.
+ Analysiere diese und liefere konkrete Verbesserungsvorschläge,
+ um die Laufzeit zu verbessern. Achte auf gut lesbaren Code:
 
 public static void arrangeOrder(int[] numbers) {
 
